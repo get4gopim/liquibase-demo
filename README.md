@@ -16,7 +16,7 @@ resources:resources liquibase:update
 
 ## Maven Compile and Rollback to Tagged Version
 ```aidl
-resources:resources liquibase:rollback -Dliquibase.rollbackTag=version_1.3
+resources:resources liquibase:rollback -Dliquibase.rollbackTag=version_1.0.1
 ```
 
 ## References
