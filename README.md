@@ -20,7 +20,7 @@ To update the database use the below profile.
 mvn -Pupdate-dev-database resources:resources liquibase:update -Pupdate-dev-database
 ```
 
-## Maven Compile and Rollback to Tagged Version
+## Rollback to Tagged Version
 To rollback to a specific tagged version specify the tag name.
 ```aidl
 mvn -Pupdate-dev-database resources:resources liquibase:rollback -Dliquibase.rollbackTag=version_1.0.1
