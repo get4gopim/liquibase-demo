@@ -3,12 +3,15 @@
 		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 		   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 
-  <!-- Initial Schema creation and setup -->
-  <include relativeToChangelogFile="true" file="initial-changelog.xml"/> 
+    <!-- Initial Schema creation and setup -->
+    <include relativeToChangelogFile="true" file="initial-changelog.xml"/>
   
   
-  <!--  Version 1.0.0 -->
-  <include relativeToChangelogFile="true" file="1.0/changeLog-data-1.0.xml"/>
-  
-  
+    <!--  Version 1.0.0 -->
+    <include relativeToChangelogFile="true" file="1.0/changelog-ddl-1.0.xml"/>
+    <include relativeToChangelogFile="true" file="1.0/changelog-dml-1.0.xml"/>
+
+    <!--  Version 2.0.0 -->
+    <include relativeToChangelogFile="true" file="2.0/changelog-dml-2.0.xml"/>
+
 </databaseChangeLog>

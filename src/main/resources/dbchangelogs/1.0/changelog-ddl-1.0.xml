@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd ">
+
+	<changeSet author="get4gopim" id="1.0.0-ddl-changeLog">
+		<tagDatabase tag="version_1.0.0"/>
+	</changeSet>
+
+	<changeSet author="liquibase-docs" id="1.0.0-ddl-changeLog-01">
+		<comment>
+			JIRA-646 rename column name
+		</comment>
+		<renameColumn columnDataType="varchar(50)"
+					  newColumnName="full_name"
+					  oldColumnName="name"
+					  remarks="A String"
+					  schemaName="public"
+					  tableName="person" />
+	</changeSet>
+	
+	<changeSet author="tester" id="1.0.0-ddl-changeLog-02">
+		<createTable tableName="a_test1">
+			<column name="id" type="int"/>
+			<column name="name" type="varchar(50)"/>
+			<column name="city" type="varchar(50)"/>
+			<column name="last_name" type="varchar(50)"/>
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd ">
+
+	<changeSet author="get4gopim" id="2.0.0-dml-changeLog">
+		<tagDatabase tag="version_2.0.0"/>
+	</changeSet>
+
+	<changeSet author="liquibase-docs" id="2.0.0-dml-changeLog-01">
+		<setColumnRemarks catalogName="cat"
+						  columnName="id"
+						  remarks="Unique Identifier of this table"
+						  schemaName="public"
+						  tableName="person"/>
+		<rollback></rollback>
+	</changeSet>
+
+	<changeSet author="tester" id="2.0.0-dml-changeLog-02">
+		<output target="INFO">Make sure you feed changes via Liquibase</output>
+		<rollback/>
+	</changeSet>
+
+</databaseChangeLog>
